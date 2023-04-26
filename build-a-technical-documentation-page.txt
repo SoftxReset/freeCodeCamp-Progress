@@ -1,0 +1,296 @@
+** start of undefined **
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="styles.css"/>
+  </head>
+  <body>
+    <nav id="navbar">
+      <header class="title-header">HTML and CSS Documentation</header>
+      <ul>
+        <li><a class="nav-link" href="#Introduction_to_HTML">Introduction to HTML</a></li>
+        <li><a class="nav-link" href="#HTML_Class_Attribute">HTML Class Attribute</a></li>
+        <li><a class="nav-link" href="#HTML_Style_Guide">HTML Style Guide</a></li>
+        <li><a class="nav-link" href="#HTML_Forms">HTML Forms</a></li>
+        <li><a class="nav-link" href="#CSS_Introduction">CSS Introduction</a></li>
+        <li><a class="nav-link" href="#CSS_Layout_Overflow">CSS Layout Overflow</a></li>
+      </ul>
+    </nav>
+    <main id="main-doc">
+      <section class="main-section" id="Introduction_to_HTML">
+    <header>Introduction to HTML</header>
+    <article>
+      <p>HTML, or Hyper Text Markup Language, is the standard markup language when creating Web pages. It's often described as the skeletal structure of a Web page, consisting of different elements.</p>
+      <p>An HTML element is defined by its starting tag, its content, and its ending tag. The tags are closed within Angle brackets.</p>
+      <code>starttag Content /endtag</code>
+      <p>There can be exceptions to this, such as the br element, which represents a line break, moving the following content to the next line.</p>
+    </article>
+    </section>
+    <section class="main-section" id="HTML_Class_Attribute">
+      <header>HTML Class Attribute</header>
+      <article>
+        <p>The class attribute in HTML is used to specify a specify class for HTML elements, with multiple elements able to share the same class. However, they are case sensitive.</p>
+        <p>In the following example, the example element has a class of "egg."</p>
+        <code>starttag class="egg" /endtag
+        </code>
+        <p>
+          The attribute is often used to select a certain class in HTML, in a style sheet. This goes further in Javascript where the elements of that class can be accessed and manipulated.
+        </p>
+        <p>For example, by using a CSS selector for the entire HTML document, the entire Web page's background color can change. However, by giving a class specified in different elements of the Web page a different background color, a contrast between those elements' contents and the document is made.<br>
+        The example is presented in CSS, with "example" being the class targeted:</p>
+        <code>.html {
+            background-color: purple;
+          }
+          .example {
+            background-color: teal;
+          }
+        </code>
+        <p>
+          Multiple classes can belong to one HTML element via separation by a singular space. Classes that are more than one word long require a hyphen between them.
+        </p>
+        <code>class="pancake syrup"
+          class="pancake-syrup-bottle"
+        </code>
+        <p>
+          Classes can also be shared among different elements. This can be done so that the formatting style can be shared.
+        </p>
+        <code>h2 class=beverage /h2
+          p class=dessert /p
+        </code>
+      </article>
+    </section>
+    <section class="main-section" id="HTML_Style_Guide">
+      <header>HTML Style Guide</header>
+      <article>
+        <p>This portion of the technical document is centered around guidelines that make a HTML code good.</p>
+        <ul>
+          <h2>Declaring the Document Type</h2> 
+          <p>This allows the Web page to know what version of HTML the Web page is being written in.</p>
+          <code>!DOCTYPE html</code>
+          <h2>Lowercase Element Names</h2>
+          <p>Although HTML can be written in uppercase and lowercase interchangeably, it's recommended to have elements written in lowercase for good reasons:</p>
+          <li>Lowercase looks cleaner.</li>
+          <li>Lowercase is easier to type.</li>
+          <li>Developers generally use lowercase, like a rule of thumb.</li>
+          <p>For example, the following two blocks of code differ in how the one written in lowercase is easier on the eyes, versus the block of code written in uppercase.</p>
+          <p>This rule also extends to the attributes associated with HTML elements.</p>
+          <code>body
+            p
+            /body
+          </code>
+          <code>BODY
+            P class="LOUD"
+            /BODY
+          </code>
+          <h2>Quoting Attribute Values</h2>
+          <p>Quoting attribute values, such as the "class" attribute and the "id" attribute, is recommended as well, for the following reasons:</p>
+          <li>Another general rule of thumb of developers.</li>
+          <li>Values without quotations can be easily overlooked.</li>
+          <li>Quoted values are easier to read.</li>
+          <li>Quotations are required when the value contains space(s).</li>
+          <h3>Good:</h3>
+          <code>element class="value"</code>
+          <h3>Bad:</h3>
+          <code>element class=value</code>
+          <h3>Unworkable:</h3>
+          <code>element class=different values</code>
+          <h2>Closing HTML Elements</h2>
+          <p>Though not all elements require a closing tag, it is encouraged to do so.</p>
+          <li>Code that includes closing tags are more readable.</li>
+          <li>Closing tags makes code easier to follow.</li>
+          <li>Prevents the next tag from being coupled with the previous.</li>
+          <li>Closing tags look cleaner than leaving the element seemingly open ended.</li>
+          <h2>Specifying Alt, Width, and Height Attributes for Images</h2>
+          <li>The alt attribute is important for the image element, in case the image cannot be displayed, making it important that the attribute be specified.</li>
+          <li>Similarly, the width and height attributes prevent image flickering by defining and reserving the space needed for the image.</li>
+          <h2>Setting the Viewport</h2>
+          <p>This dictates the Web page's dimensions and scaling depending on what device it is being viewed by.</p>
+          <code>meta name="viewport" content="width=device-width, initial-scale=1.0"</code>
+          </ul>
+      </article>
+    </section>
+    <section class="main-section" id="HTML_Forms">
+      <header>HTML Forms</header>
+      <article>
+        <p>HTML forms are used to collect input for users, usually sent to a server to be processed. This is commonly seen on login pages that require a user's username and password. It is a container element that consists of different input elements, such as: radio buttons, submit buttons, checkboxes, etc.</p>
+        <code>form
+          label for="first-name" /label
+          input type="text" id="first-name" name="first-name"
+          input type="checkbox" id="pet1" name="pet1" value="dog"
+          label for="pet1" /label
+          /form
+        </code>
+      </article>
+    </section>
+    <section class="main-section" id="CSS_Introduction">
+      <header>CSS Introduction</header>
+      <article>
+        <p>Cascading Style Sheets, otherwise known as CSS, is the language used to style a Web page. This includes the design, layout and display for different devices. It dictates how HTML elements are presented on various media. This solves the issue of styling with HTML, as HTML was made with only the Web page's content in mind.</p>
+      </article>
+    </section>
+    <section class="main-section" id="CSS_Layout_Overflow">
+      <header>CSS Layout Overflow</header>
+      <article>
+        <p>Overflow is a CSS property with the following values for when the content is too big for its area:</p>
+          <h4>Visible</h4><p>This is the default display of the content; the content will flow out of the element's box.</p>
+          <h4>Hidden</h4>
+          <p>This value clips the content, but the rest of the content will be invisible.</p>
+          <h4>Scroll</h4>
+          <p>The content is clipped, but a scrollbar will be added in order to see the rest of the content.</p>
+          <h4>Auto</h4>
+          <p>Functions similarly to the scroll value, but the scrollbar only appears when necessary.</p>
+        <h2>Overflow properties:</h2>
+        <h4>Overflow</h4><p>Specifies what happens if the content is too big for the element's box.</p>
+        <h4>Overflow-Wrap</h4><p>Specifies whether or not the browser can break lines with long words, if they overflow its container</p>
+        <h4>Overflow-X</h4><p>Specifies what to do with the left/right edges of the content if it overflows the element's content area</p>
+        <h4>Overflow-Y</h4><p>	Specifies what to do with the top/bottom edges of the content if it overflows the element's content area</p>
+      </article>
+    </section>
+  </body>
+</html>
+
+** end of undefined **
+
+** start of undefined **
+
+html, body {
+  min-width: 300px;
+  color: #4d4e53;
+  font-family: Didot, serif;
+  line-height: 1.5;
+  background-color: #8b8da0;
+}
+
+.title-header {
+  font-weight: bold;
+}
+
+#navbar {
+  position: fixed;
+  min-width: 275px;
+  top: 0px;
+  left: 0px;
+  width: 300px;
+  height: 100%;
+  border-right: solid;
+  border-color: black;
+}
+
+header {
+  color: black;
+  margin: 10px;
+  padding-left: 7;
+  text-align: center;
+  font-size: 1.8em;
+  font-weight: normal;
+  background-color: #eeebe7;
+  border-radius: 7px;
+  color: #8d7361;
+}
+
+#main-doc header {
+  text-align: left;
+  margin: 0px;
+  
+}
+
+#navbar ul {
+  height: 88%;
+  padding: 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+#navbar li {
+  color: #4d4e53;
+  border-top: 1px solid;
+  list-style: none;
+  position: relative;
+  width: 100%;
+  padding-bottom: 10px;
+}
+
+#navbar a {
+  display: block;
+  padding: 10px 30px;
+  color: #4d4e53;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#main-doc {
+  position: absolute;
+  margin-left: 310px;
+  padding: 20px;
+  margin-bottom: 110px;
+}
+
+section article {
+  margin: 15px;
+  font-size: 0.96em;
+  color: #eeebe7;
+}
+
+section li {
+  margin: 15px 0px 0px 20px;
+}
+
+code {
+  display: block;
+  text-align: left;
+  white-space: pre-line;
+  position: relative;
+  line-height: 2;
+  background-color: #f7f7f7;
+  padding: 15px;
+  margin: 10px;
+  border-radius: 5px;
+  margin-left: -20px;
+  width: 75%;
+  padding-left: 10px;
+  padding-right: 45px;
+  min-width: 233px;
+  color: #50423d;
+}
+
+@media only screen and (max-width: 815px) {
+  /* For mobile phones: */
+  #navbar ul {
+    border: 1px solid;
+    height: 207px;
+  }
+
+  #navbar {
+    background-color: white;
+    position: absolute;
+    top: 0;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    max-height: 275px;
+    border: none;
+    z-index: 1;
+    border-bottom: 2px solid;
+  }
+
+  #main-doc {
+    position: relative;
+    margin-left: 0px;
+    margin-top: 270px;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  #main-doc {
+    margin-left: -10px;
+  }
+
+p {
+  font-size: 15px;
+  font-family: Arial, sans-serif;
+  color: #eeebe7;
+}
+
+** end of undefined **
+
