@@ -1,0 +1,147 @@
+** start of undefined **
+
+<!doctype html>
+<html lang="en">
+<head>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<main id="main">
+  <h1 id="title">Marco</h1>
+  <p>the bestest boy</p>
+  <figure id="img-div">
+    <img
+      id="image"
+      src="https://media.discordapp.net/attachments/964358542322720839/998705343683113130/IMG_6398.jpg?width=526&height=701"
+    />
+    <figcaption id="img-caption">
+      Marco on the search for more spider to alert me of.
+    </figcaption>
+  </figure>
+  <section id="tribute-info">
+    <h2 id="header">Marco's Accomplishments and Noteworthy Actions:<h/2>
+    <ul>
+      <li>Crossbreed of American Eskimo and Shiba Inu</li>
+      <li>Ability to drift on wood finish flooring.</li>
+      <li>Check if doors are closed by testing them with his snout.</li>
+      <li>Able to bring the toy back majority of the time when it is thrown</li>
+      <li>Graduate of Feisty Fidos</li>
+    </ul>
+  <blockquote>
+    <p>"I like beef and tissues."</p>
+  </blockquote>
+  <h3>
+    Why not have a read about
+    <a
+    id="tribute-link"
+    href="https://wagwalking.com/breed/imo-inu"
+    target="_blank"
+    >Imo Inu?</a>
+  </h3>
+  </section>
+</main>
+</body>
+</html>
+
+** end of undefined **
+
+** start of undefined **
+
+html {
+  font-size: 10px;
+}
+
+body {
+  font-family: Verdana;
+  font-size: 1.6rem;
+  line-height: 1.5;
+  text-align: center;
+  color: #333;
+  margin: 0;
+}
+
+h1 {
+  font-size: 4rem;
+  margin-bottom: 0;
+}
+
+@media (max-width: 460px) {
+  h1 {
+    font-size: 3.5rem;
+    line-height: 1.2;
+  }
+}
+
+h2 {
+  font-size: 3.25rem
+}
+
+a {
+  color: #477ca7;
+}
+
+a:visited {
+  color: #74638f;
+}
+
+#main {
+  margin: 30px 8px;
+  padding: 15px;
+  border-radius: 15px;
+  background: #eee;
+}
+
+@media (max-width: 460px) {
+  #main {
+    margin: 0;
+  }
+}
+
+img {
+  max-width: 100%;
+  display: block;
+  height: auto;
+  margin: 0 auto;
+}
+
+#img-div {
+  background: white;
+  padding: 10px;
+  margin: 0;
+}
+
+#img-caption {
+  margin: 15px 0 5px 0;
+}
+
+@media (max-width: 460px) {
+  #img-caption {
+    font-size: 1.4rem;
+  }
+}
+
+#header {
+  margin: 50px 0;
+  text-align: center;
+}
+
+ul {
+  max-width: 550px;
+  margin: 0 auto 50px auto;
+  text-align: left;
+  line-height: 1.6;
+}
+
+li {
+  margin: 16px 0;
+}
+
+blockquote {
+  font-style: italic;
+  max-width: 545px;
+  margin: 0 auto 50px auto;
+  text-align: left;
+}
+
+** end of undefined **
+
