@@ -1,0 +1,123 @@
+** start of undefined **
+
+<!DOCTYPE html>
+<html lang="eng"></html>
+<link rel="stylesheet" href="styles.css">
+<h1 id="title">freeCodeCamp Survey Form</h1>
+<p id="description"><i><small>Thank you for taking the time to help us improve the platform</i><small></p>
+<form id="survey-form" class="survey-form">
+  <label for="name" id="name-label">Name 
+  <br> 
+    <input required id="name" type="text" placeholder="Enter your name"></input></label>
+  <br>
+  <label for="email" id="email-label">Email
+  <br>
+    <input required id="email" type="email" placeholder="Enter your email"></input></label>
+  <br>
+  <label for="age" id="number-label">Age (optional) 
+  <br>
+    <input required id="number" type="number" min="6" max="99" placeholder="Enter your age"></input></label>
+  <br>
+  <label for="role" id="role-label">Which option best describes your current role?
+  <br>
+  <select id="dropdown">
+    <option>Select current role</option>
+    <option>Student</option>
+    <option>Full-Time Employee</option>
+    <option>Hobbyist</option>
+    <option>Prefer not to say / Other</option></select>
+  <br>
+  <label for="recommend" id="recommend-label">Would you recommend freeCodeCamp to a friend?
+  <br>
+    <input type="radio" name="choice" value="definitely">Definitely</input>
+  <br>
+    <input type="radio" name="choice" value="maybe">Maybe
+  <br>
+    <input type="radio" name="choice" value="not sure">Not sure
+  <br>
+    <label for="feature">What is your favorite feature of freeCodeCamp?</label>
+  <br>
+    <select type="dropdown">
+      <option>Select an option</option>
+      <option>Challenges</option>
+      <option>Projects</option>
+      <option>Community</option>
+      <option>Open Source</option>
+    </select>
+  <br>
+  <label for="improve" id="improve-id">What would you like to see improved?
+  <br>
+    <input type="checkbox" name="option" value="front-end projects">Front-end Projects</input>
+      <br>
+    <input type="checkbox" name="option" value="back-end projects">Back-end Projects</input>
+      <br>
+    <input type="checkbox" name="option" value="data visualization">Data Visualization</input>
+      <br>
+    <input type="checkbox" name="option" value="challenges">Challenges</input>
+      <br>
+    <input type="checkbox" name="option" value="open source community">Open Source Community</input>
+      <br>
+    <input type="checkbox" name="option" value="gitter help rooms">Gitter Help Rooms</input>
+      <br>
+    <input type="checkbox" name="option" value="forums">Forums</input>
+      <br>
+    <input type="checkbox" name="option" value="additional courses">Additional Courses</input>
+      <br>
+  <br>
+  <label for="feedback">Any comments for suggestions?</label>
+  <br>
+    <textarea id="feedback" name="feedback" rows="5" required placeholder="Leave your comments and suggestions here..."></textarea>
+  <br>
+  <button id="submit" type="submit">Submit</button>
+</form>
+
+** end of undefined **
+
+** start of undefined **
+
+.survey-form {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #2f184b;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-family: helvetica;
+}
+h1, p {
+  text-align: center;
+  margin-bottom: 20px;
+  font-family: georgia;
+}
+h1 {
+  font-size: 24px;
+  margin-top: 20px;
+}
+p, label {
+  font-size: 16px;
+}
+label {
+  color: #f4effa;
+}
+input[type="text"], input[type="email"], input[type="number"], select, textarea {
+  width: 100%;
+  margin-top: 7px;
+  margin-bottom: 12px;
+  padding: 3px;
+  border: none;
+  border-radius: 5px
+}
+button[type="submit"] {
+  background-color: #c8b1e4;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+}
+button[type="submit"]:hover {
+  background-color: #9b72cf;
+}
+
+** end of undefined **
+
