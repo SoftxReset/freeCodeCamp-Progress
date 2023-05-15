@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Wac-a-mole</title>
+        <link rel="stylesheet" href="styles.css"
+    </head>
+    <body>
+        // This has been "hardcore coded" as 0
+        <h2>Your score</h2>
+        <h2 id="score">0</h2>
+        <h2>Time Left:</h2>
+        <h2 id="time-left">60</h2>
+
+        <!--these could have gone into javascript, but apparently there isn't too many for that to be necessary-->
+        <div class="grid">
+            <div class="square" id="1"></div>
+            <div class="square" id="2"></div>
+            <div class="square" id="3"></div>
+            <div class="square" id="4"></div>
+            <div class="square" id="5"></div>
+            <div class="square" id="6"></div>
+            <div class="square" id="7"></div>
+            <div class="square" id="8"></div>
+            <div class="square" id="9"></div>
+        </div>
+
+        <script src="app.js"></script>
+    </body>
+</html>
+
+
+.grid {
+    width: 600px;
+    height: 600px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.square {
+    height: 200px;
+    width: 200px;
+    border: solid black 1px
+}
+
+.mole {
+    background-color: blue;
+}
+
+
+const squares = document.querySelectorAll('.square')
+const mole = document.querySelector('.mole')
+const timeLeft = document.querySelector("#time-left")
+const score = document.querySelector("#score")
+/*Const = certain, let = less restrictive, if = situation dependent*/
+/*The following are global*/
+let result = 0
+let hitPosition
+let currentTime = 60
+let timerId = null
+
+function randomSquare() {
+    squares.forEach(sqaure => {
+        squares.classList.remove('mole')
+    })
+    /*This allows the game to randomly choose a grid square for the mole to appear from.
+    The randomPosition does so in a literal sense, with the remaining string being the mathmatical process behind it.
+    The console.log is staying as a reminder for how often one should check their code when possible, and how.*/
+    let randomSquare = squares[Math.floor(Math.random() * 9)]
+    console.log(randomSquare)
+    console.log(Math.floor(Math.random() * 9))
+    randomSquare.classList.add('mole')
+/*keyword prior to "=", means to save it to that keyword*/
+    hitPosition = randomSquare.id
+}
+
+squares.forEach(id => {
+    sqaure.addEventListener('movedown', ()=> {
+        if (squares.id == hitPosition) {
+            result++
+            score.textContent = result
+            hitPosition = null
+        }
+    })
+})
+
+function moveMole() {
+    timerID = setInterval(randomSquare, 1000)
+}
+/*Slow realization that functions must be added to every feature(?) of a build*/
+moveMole()
+
+function countDown() {
+    currentTime--
+    timeLeft.textContent = currentTime
+
+    if (currentTime == 0) {
+        clearInterval(countDownTimerId)
+        clearInterval(timerId)
+        alert('GAME OVER! Your final score is' + result)
+    }
+}
+
+let countDownTimerId = setInterval(countDown, 1000)
