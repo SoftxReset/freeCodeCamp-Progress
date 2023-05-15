@@ -6,7 +6,7 @@
         <link rel="stylesheet" href="styles.css"
     </head>
     <body>
-        // This has been "hardcore coded" as 0
+        <!--This has been "hardcore coded" as 0-->
         <h2>Your score</h2>
         <h2 id="score">0</h2>
         <h2>Time Left:</h2>
